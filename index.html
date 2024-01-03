@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+
+
+  <table id="myTable" border=1 style="font-size: 55px">
+
+    <thead>
+      <th colspan="16"><span style="float:left; font-size: 20px;">
+          Último número:
+          <span id="lastNumber" style="text-align: left; font-size: 50px;"> </span>
+        </span>
+        <span style="float:right;font-size: 50px; color: lightgray;"><span id="linha"
+            onclick="color('linha')">linha</span> <span id="cartela" onclick="color('cartela')">cartela
+            cheia</span></span>
+      </th>
+      <tr>
+        <td style="color:#000">B</td>
+        <td id="01" onclick="color('01');">01</td>
+        <td id="02" onclick="color('02');">02</td>
+        <td id="03" onclick="color('03');">03</td>
+        <td id="04" onclick="color('04');">04</td>
+        <td id="05" onclick="color('05');">05</td>
+        <td id="06" onclick="color('06');">06</td>
+        <td id="07" onclick="color('07');">07</td>
+        <td id="08" onclick="color('08');">08</td>
+        <td id="09" onclick="color('09');">09</td>
+        <td id="10" onclick="color('10');">10</td>
+        <td id="11" onclick="color('11');">11</td>
+        <td id="12" onclick="color('12');">12</td>
+        <td id="13" onclick="color('13');">13</td>
+        <td id="14" onclick="color('14');">14</td>
+        <td id="15" onclick="color('15');">15</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="color:#000">I</td>
+        <td id="16" onclick="color('16');">16</td>
+        <td id="17" onclick="color('17');">17</td>
+        <td id="18" onclick="color('18');">18</td>
+        <td id="19" onclick="color('19');">19</td>
+        <td id="20" onclick="color('20');">20</td>
+        <td id="21" onclick="color('21');">21</td>
+        <td id="22" onclick="color('22');">22</td>
+        <td id="23" onclick="color('23');">23</td>
+        <td id="24" onclick="color('24');">24</td>
+        <td id="25" onclick="color('25');">25</td>
+        <td id="26" onclick="color('26');">26</td>
+        <td id="27" onclick="color('27');">27</td>
+        <td id="28" onclick="color('28');">28</td>
+        <td id="29" onclick="color('29');">29</td>
+        <td id="30" onclick="color('30');">30</td>
+      </tr>
+      <tr>
+        <td style="color:#000">N</td>
+        <td id="31" onclick="color('31');">31</td>
+        <td id="32" onclick="color('32');">32</td>
+        <td id="33" onclick="color('33');">33</td>
+        <td id="34" onclick="color('34');">34</td>
+        <td id="35" onclick="color('35');">35</td>
+        <td id="36" onclick="color('36');">36</td>
+        <td id="37" onclick="color('37');">37</td>
+        <td id="38" onclick="color('38');">38</td>
+        <td id="39" onclick="color('39');">39</td>
+        <td id="40" onclick="color('40');">40</td>
+        <td id="41" onclick="color('41');">41</td>
+        <td id="42" onclick="color('42');">42</td>
+        <td id="43" onclick="color('43');">43</td>
+        <td id="44" onclick="color('44');">44</td>
+        <td id="45" onclick="color('45');">45</td>
+      </tr>
+      <tr>
+        <td style="color:#000">G</td>
+        <td id="46" onclick="color('46');">46</td>
+        <td id="47" onclick="color('47');">47</td>
+        <td id="48" onclick="color('48');">48</td>
+        <td id="49" onclick="color('49');">49</td>
+        <td id="50" onclick="color('50');">50</td>
+        <td id="51" onclick="color('51');">51</td>
+        <td id="52" onclick="color('52');">52</td>
+        <td id="53" onclick="color('53');">53</td>
+        <td id="54" onclick="color('54');">54</td>
+        <td id="55" onclick="color('55');">55</td>
+        <td id="56" onclick="color('56');">56</td>
+        <td id="57" onclick="color('57');">57</td>
+        <td id="58" onclick="color('58');">58</td>
+        <td id="59" onclick="color('59');">59</td>
+        <td id="60" onclick="color('60');">60</td>
+      </tr>
+      <tr>
+        <td style="color:#000">O</td>
+        <td id="61" onclick="color('61');">61</td>
+        <td id="62" onclick="color('62');">62</td>
+        <td id="63" onclick="color('63');">63</td>
+        <td id="64" onclick="color('64');">64</td>
+        <td id="65" onclick="color('65');">65</td>
+        <td id="66" onclick="color('66');">66</td>
+        <td id="67" onclick="color('67');">67</td>
+        <td id="68" onclick="color('68');">68</td>
+        <td id="69" onclick="color('69');">69</td>
+        <td id="70" onclick="color('70');">70</td>
+        <td id="71" onclick="color('71');">71</td>
+        <td id="72" onclick="color('72');">72</td>
+        <td id="73" onclick="color('73');">73</td>
+        <td id="74" onclick="color('74');">74</td>
+        <td id="75" onclick="color('75');">75</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <script>
+    function color(valor) {
+
+      var number = document.getElementById("lastNumber");
+      var item = document.getElementById(valor);
+      if (item.style.color != 'white') {
+        item.style.backgroundColor = 'black';
+        item.style.color = 'white';
+        if (valor != "linha" && valor != "cartela") {
+          number.innerHTML = valor;
+        }
+      }
+      else {
+        item.style.backgroundColor = 'white';
+        item.style.color = 'lightgray';
+      }
+
+    }
+
+  </script>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
