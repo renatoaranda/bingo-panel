@@ -1,2 +1,3 @@
-Panel created to play with bingo game.
+Panel created to play a bingo game.
 
+https://codepen.io/Renato-Aranda/pen/abgogKJ
