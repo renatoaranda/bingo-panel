@@ -1,4 +1,14 @@
 var lastNumbers = [];
+function blink(item){
+  let count = 0;
+  const intervalId = setInterval(function() {
+    item.style.visibility = (item.style.visibility === "hidden" ? "visible" : "hidden");
+    if (count++ === 7) {
+      clearInterval(intervalId);
+    }
+  }, 400);
+}
+
 function color(valor) {
 
   var number = document.getElementById("lastNumber");
@@ -7,7 +17,10 @@ function color(valor) {
   if (item.style.color != 'white') {
     item.style.backgroundColor = 'black';
     item.style.color = 'white';
+      
     if (valor != "linha" && valor != "cartela") {
+      blink(item);
+        
       if(lastNumbers.length = 5){
         lastNumbers.pop();
       }
