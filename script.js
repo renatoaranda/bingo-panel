@@ -12,8 +12,12 @@ function color(valor) {
         lastNumbers.pop();
       }
       lastNumbers.splice(0,0,valor); 
-      
     }
+      else {
+          document.getElementById("linha").style.visibility = "hidden";
+          document.getElementById("cartela").style.visibility = "hidden";
+          document.getElementById(valor).style.visibility = "visible";
+      }
   }
   else {
     if (valor != "linha" && valor != "cartela") {
@@ -22,6 +26,10 @@ function color(valor) {
           lastNumbers.splice(index, 1);
       }
     }
+      else {
+          document.getElementById("linha").style.visibility = "visible";
+          document.getElementById("cartela").style.visibility = "visible";
+      }
     item.style.backgroundColor = 'white';
     item.style.color = 'lightgray';
   }
