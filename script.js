@@ -2,7 +2,7 @@ function color(valor) {
 
   var number = document.getElementById("lastNumber");
   var item = document.getElementById(valor);
-  var last-numbers = []
+  var last-numbers = [];
   if (item.style.color != 'white') {
     item.style.backgroundColor = 'black';
     item.style.color = 'white';
